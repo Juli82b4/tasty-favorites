@@ -8,7 +8,6 @@ const useFetch = () => {
     const response = await fetch("https://dummyjson.com/products");
     const data = await response.json();
     setProducts(data.products);
-    console.log(products);
   };
 
   // Filtering

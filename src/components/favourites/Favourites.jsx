@@ -3,7 +3,6 @@ import ProductCard from "../productcard/ProductCard";
 
 const Favourites = () => {
   const { rating } = useFetch();
-  console.log(rating);
 
   return (
     <section className="products">
