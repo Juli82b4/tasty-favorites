@@ -1,8 +1,8 @@
-import React from 'react';
-import styles from './pageheader.module.css';
+import React from "react";
+import styles from "./pageheader.module.css";
 
 const PageHeader = ({ title, subTitle, headerImg }) => {
-  console.warn(headerImg)
+  console.warn(headerImg);
   return (
     <header
       className={styles.header}
@@ -17,4 +17,3 @@ const PageHeader = ({ title, subTitle, headerImg }) => {
 };
 
 export default PageHeader;
-

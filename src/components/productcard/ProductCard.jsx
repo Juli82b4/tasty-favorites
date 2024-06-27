@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FcLike, FcDislike } from "react-icons/fc"; 
+import { FcLike, FcDislike } from "react-icons/fc";
 import styles from "../productcard/productcard.module.css";
 import { useLocalStorage } from "@uidotdev/usehooks";
 
@@ -36,4 +36,3 @@ const ProductCard = ({ product }) => {
 };
 
 export default ProductCard;
-
