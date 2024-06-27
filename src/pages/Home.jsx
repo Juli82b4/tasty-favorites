@@ -13,17 +13,16 @@ const Home = () => {
       <PageHeader
         title="PAENE PRODUKTER"
         subTitle="Her kan du se alle vores paene produkter"
-        headerImg={product?.image}
+        headerImg={product?.images[0]}
       />
-
-      <Favourite />
       <SectionHeader title="Brugernes Favouritter" />
+      <Favourite />
 
-      <MyFavourite />
       <SectionHeader title="MinFavouritter" />
+      <MyFavourite />
 
-      <NewsLetter />
       <SectionHeader title="Tilmeld dig vores nyhedsbrev" />
+      <NewsLetter />
     </section>
   );
 };

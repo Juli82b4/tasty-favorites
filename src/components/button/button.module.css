@@ -1,0 +1,17 @@
+.button {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 1em;
+    background-color: rgb(83, 171, 35);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 2px;
+  }
+  
+  .button:active {
+    transform: translateY(0);
+  }
+  
