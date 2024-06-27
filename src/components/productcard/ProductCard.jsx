@@ -25,9 +25,9 @@ const ProductCard = ({ product }) => {
         <figcaption>
           <h2 className="textunder">{product.title}</h2>
           {isFavourite ? (
-            <FcDislike size={30} onClick={handleLike} />
-          ) : (
             <FcLike size={30} onClick={handleLike} />
+          ) : (
+            <FcDislike size={30} onClick={handleLike} />
           )}
         </figcaption>
       </figure>

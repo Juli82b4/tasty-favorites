@@ -18,7 +18,7 @@ const Home = () => {
       <SectionHeader title="Brugernes Favouritter" />
       <Favourite />
 
-      <SectionHeader title="MinFavouritter" />
+      <SectionHeader title="Min Favouritter" />
       <MyFavourite />
 
       <SectionHeader title="Tilmeld dig vores nyhedsbrev" />
