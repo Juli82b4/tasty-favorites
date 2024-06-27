@@ -5,28 +5,28 @@ const ProductsDetails = () => {
   const { id } = useParams();
   const { product } = useFetchById(id);
 
-  console.log(product);
+  if (!product) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <section className="product-details">
       <div className="product-header">
         <p>{product.title}</p>
-        <img src={product.images[0]} alt={product.images[0]} />
+        <img src={product.images?.[0]} alt={product.title} />
       </div>
 
       <div className="product-details-section">
         <div>
           <p>Description</p>
-          <br />
           <p>{product.description}</p>
         </div>
 
         <div>
           <p>Info</p>
-          <br />
           <p>Price: {product.price}</p>
           <br />
-          <p>SKU: {product.dimensions.width}</p>
+          <p>SKU: {product.sku}</p>
           <br />
           <p>{product.availabilityStatus}</p>
           <br />
@@ -37,23 +37,23 @@ const ProductsDetails = () => {
 
         <div>
           <p>Dimensions</p>
+          <p>Width: {product.dimensions?.width}</p>
           <br />
-          <p>Width: {product.dimensions.width}</p>
+          <p>Height: {product.dimensions?.height}</p>
           <br />
-          <p>Height: {product.dimensions.height}</p>
-          <br />
-          <p>Depth: {product.dimensions.depth}</p>
+          <p>Depth: {product.dimensions?.depth}</p>
         </div>
 
         <div>
           <p>Reviews</p>
-          <br />
-          {product.reviews.forEach(review => {
-            {review.reviewerName}
-            {review.date}
-            {review.rating}
-            {review.comment}
-          })}
+          {product.reviews?.map((review, index) => (
+            <div key={index}>
+              <p>
+                <strong>{review.reviewerName}</strong>( {review.date} ) Rating:
+                {review.rating} - {review.comment}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

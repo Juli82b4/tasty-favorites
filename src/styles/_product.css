@@ -1,0 +1,8 @@
+.product-details {
+  background-color: black;
+}
+
+.product-details-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
