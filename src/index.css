@@ -1,1 +1,5 @@
 @import "./styles/main.css";
+
+body{
+    max-width: 100%;
+}

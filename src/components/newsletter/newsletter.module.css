@@ -1,0 +1,37 @@
+/* newsletter.module.css */
+.newsletter {
+  padding: 50px;
+  background-color: #5f7b6a;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.label {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.input {
+  padding: 8px;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.button {
+  padding: 18px 50px;
+  font-size: 16px;
+  background-color: #275c2b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #32d470;
+}

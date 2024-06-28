@@ -1,11 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import Modal from "../Modal/Modal";
-import Button from "../button/Button";
+import styles from "./newsletter.module.css"; // Ensure the path is correct
 
 const NewsLetter = () => {
   const [inputValue, setInputValue] = useState("");
   const dialog = useRef();
   const inputRef = useRef();
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
@@ -15,25 +20,21 @@ const NewsLetter = () => {
     dialog.current.showModal();
   };
 
-  useEffect(() => {
-    inputRef.current.focus();
-  });
-
   return (
-    <section>
+    <section className={styles.newsletter}>
       <Modal ref={dialog} email={inputValue} />
-      <form onSubmit={handleSubmit}>
-        <label>Din email:</label>
+      <form onSubmit={handleSubmit} className={styles.form}>
+        <label htmlFor="email" className={styles.label}>Din email:</label>
         <input
+          id="email"
           ref={inputRef}
           type="email"
           value={inputValue}
           onChange={handleInputChange}
+          className={styles.input}
         />
-        <Button type="submit" title="Tilmeld" />
+        <button type="submit" className={styles.button}>Submit</button>
       </form>
-
-      <button></button>
     </section>
   );
 };
